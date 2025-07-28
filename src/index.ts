@@ -1,0 +1,1 @@
+export * from './decorators/is-angolan-bi.decorator';
