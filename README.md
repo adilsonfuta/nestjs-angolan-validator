@@ -20,7 +20,7 @@ export class CreateUserDto {
   @IsString()
   nome: string;
 
-  @IsAngolanBI({ message: 'BIC inválido! Exemplo: 005928773LA049' })
+  @IsAngolanBI({ message: 'BI inválido! Exemplo: 005928773LA049' })
   bilhete: string;
 }
 ```
