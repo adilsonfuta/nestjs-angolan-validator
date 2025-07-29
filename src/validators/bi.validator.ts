@@ -1,7 +1,7 @@
 import { ValidationArguments, ValidatorConstraint, ValidatorConstraintInterface } from "class-validator";
 
-@ValidatorConstraint({name:'AngolaBIValidator', async: false})
-export class AngolaBIValidator implements ValidatorConstraintInterface {
+@ValidatorConstraint({name:'AngolanBIValidator', async: false})
+export class AngolanBIValidator implements ValidatorConstraintInterface {
     validate(value: any): Promise<boolean> | boolean {
         return typeof value === 'string' && /^\d{9}[A-Z]{2}\d{3}$/.test(value);
     }

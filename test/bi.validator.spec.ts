@@ -1,7 +1,7 @@
-import { AngolaBIValidator } from "../src/validators/bi.validator";
+import { AngolanBIValidator } from "../src/validators/bi.validator";
 
 describe("AngolanBICValidator", () => {
-  const validator = new AngolaBIValidator();
+  const validator = new AngolanBIValidator();
 
   it("should validate correct BI format", () => {
     expect(validator.validate("005928773LA049")).toBe(true);

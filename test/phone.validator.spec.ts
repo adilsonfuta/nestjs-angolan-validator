@@ -4,15 +4,38 @@ import { AngolanPhoneValidator } from '../src/validators/phone.validator';
 describe('AngolanPhoneValidator', () => {
   const validator = new AngolanPhoneValidator();
 
-  it('should validate correct phone numbers', () => {
-    expect(validator.validate('+244 912 345 678')).toBe(true);
-    expect(validator.validate('244923456789')).toBe(true);
-    expect(validator.validate('00244912345678')).toBe(true);
+  describe('Números válidos', () => {
+    const validNumbers = [
+      '912345678',       // Formato nacional
+      '923456789',       // Formato nacional
+      '244912345678',    // Formato internacional
+      '00244912345678',  // Formato internacional
+      '+244912345678',   // Formato internacional
+      '912 345 678',     // Com espaços
+      '912-345-678'      // Com hífens
+    ];
+
+    test.each(validNumbers)('deve aceitar %s', (number) => {
+      expect(validator.validate(number)).toBe(true);
+    });
   });
 
-  it('should reject invalid phone numbers', () => {
-    expect(validator.validate('91234567')).toBe(false); // Muito curto
-    expect(validator.validate('+2449123456789')).toBe(false); // Muito longo
-    expect(validator.validate('+244812345678')).toBe(false); // Operadora inválida
+  describe('Números inválidos', () => {
+    const invalidNumbers = [
+      '812345678',       // Operadora inválida
+      '91234567',        // Muito curto
+      '9123456789',      // Muito longo
+      '244812345678',    // Operadora internacional inválida
+      '00244123456789',  // Operadora internacional inválida
+      'nine one two',    // Letras
+      '',                // Vazio
+      'null',              // Null
+      'undefined'         // Undefined
+     // 912345678          // Tipo número
+    ];
+
+    test.each(invalidNumbers)('deve rejeitar %s', (number) => {
+      expect(validator.validate(number)).toBe(false);
+    });
   });
 });
