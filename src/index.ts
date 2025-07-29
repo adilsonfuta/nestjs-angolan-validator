@@ -1,1 +1,2 @@
-export * from './decorators/is-angolan-bi.decorator';
+export * from './validators';
+export * from './decorators';
