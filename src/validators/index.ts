@@ -1,9 +1,9 @@
-import { AngolaBIValidator } from "./bi.validator";
+import { AngolanBIValidator } from "./bi.validator";
 import { AngolanIBANValidator } from "./iban.validator";
 import { AngolanPhoneValidator } from "./phone.validator";
 
 export const Validators ={
-    BI: AngolaBIValidator,
+    BI: AngolanBIValidator,
     IBAN: AngolanIBANValidator,
     PHONE: AngolanPhoneValidator,
 }
