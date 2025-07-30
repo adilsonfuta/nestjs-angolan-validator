@@ -74,8 +74,8 @@ Você pode usar os validadores diretamente sem decorators:
 ```typescript
 import { Validators } from 'nestjs-angolan-validator';
 
-const isValidPhone = new Validators.Phone().validate('912345678');
-const isValidBIC = new Validators.BIC().validate('005928773LA049');
+const isValidPhone = new Validators.AngolanPhoneValidator().validate('912345678');
+const isValidBI = new Validators.AngolanBIValidator().validate('005928773LA049');
 ```
 
 5. **Contribuição**

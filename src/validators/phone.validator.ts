@@ -1,7 +1,7 @@
 // src/validators/phone.validator.ts
 import { ValidatorConstraint, ValidatorConstraintInterface } from 'class-validator';
 
-@ValidatorConstraint({ name: 'AngolanPhone', async: false })
+@ValidatorConstraint({ name: 'AngolanPhoneValidator', async: false })
 export class AngolanPhoneValidator implements ValidatorConstraintInterface {
   validate(phone: string): boolean {
     if (!phone || typeof phone !== 'string') return false;
