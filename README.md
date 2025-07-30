@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Validações para documentos angolanos em NestJS, incluindo:
-- Bilhete de Identidade (BIC)
+- Bilhete de Identidade (BI)
 - Números de telefone
 - IBAN bancário
 - NIF (Número de Identificação Fiscal)
@@ -22,7 +22,7 @@ Formato aceito:
  - 005928773LA049 (9 dígitos + 2 letras + 3 dígitos)
 
 ```typescript
-import { IsAngolanBI } from 'nestjs-angolan-bi-validator';
+import { IsAngolanBI } from 'nestjs-angolan-validator';
 
 export class CreateUserDto {
   @IsString()
