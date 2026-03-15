@@ -1,12 +1,11 @@
 {
-  "name": "@adilsonfuta/IsAngolanIdentityNumber",
-  "version": "1.1.0",
+  "name": "@adilsonfuta/isangolaidentitynumber",
+  "version": "1.1.1",
   "description": "A NestJS validator decorator for Angolan documents (BI, IBAN, NIF, Phone)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
    "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public"
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "build": "tsc",
